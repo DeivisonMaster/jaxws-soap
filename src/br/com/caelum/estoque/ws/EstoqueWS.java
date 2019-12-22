@@ -40,9 +40,11 @@ public class EstoqueWS {
 	
 	@WebMethod(operationName = "CadastrarItem")
 	@WebResult(name = "item")
-	public Item cadastrarItem(@WebParam(name = "tokenUsuario", header = true) 
-			TokenUsuario tokenUsuario, @WebParam(name = "item") Item item) 
-					throws AutorizacaoException {
+		@WebParam(name = "tokenUsuario", header = true) TokenUsuario tokenUsuario, // @WebParam altera o nome do parametro - header = true define o parametro no cabeçalho 
+	public Item cadastrarItem(
+		@WebParam(name = "tokenUsuario", header = true) TokenUsuario tokenUsuario, // @WebParam altera o nome do parametro - header = true define o parametro no cabeçalho SOAP
+		@WebParam(name = "item") Item item) 
+		throws AutorizacaoException {
 		
 		System.out.println("Cadastrando item " + item + ", " + "Token " + tokenUsuario);
 		
