@@ -4,9 +4,13 @@ import javax.xml.bind.annotation.XmlEnumValue;
 
 public enum TipoItem {
 
+	@XmlEnumValue("Livro")
 	LIVRO("Livro"), 
+	@XmlEnumValue("Celular")
 	CELULAR("Celular"),
+	@XmlEnumValue("Tablet")
 	TABLET("Tablet");
+	
 	
 	private String nome;
 
